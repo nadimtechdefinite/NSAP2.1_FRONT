@@ -30,7 +30,7 @@ const StateList = ({ onSelectState, defaultSelectedState, isMandatory, showAllIn
   //     fetchStates();
   //   }
   // }, [defaultSelectedState, onSelectState, selectedState, states]);
-
+  
   useEffect(() => {
   const fetchStates = async () => {
     try {
