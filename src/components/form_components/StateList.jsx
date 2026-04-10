@@ -24,7 +24,7 @@ const StateList = ({ onSelectState, defaultSelectedState, isMandatory, showAllIn
   //     } catch (error) {
   //       console.error('Error fetching states:', error);
   //     }
-  //   };
+  //   }; 
 
   //   if (states.length === 0 || (defaultSelectedState && selectedState !== defaultSelectedState)) {
   //     fetchStates();
