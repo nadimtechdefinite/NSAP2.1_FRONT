@@ -1,0 +1,80 @@
+.dashboard-container {
+    position: relative;
+}
+
+.table-container {
+    max-height: calc(100vh - 150px); /* Adjust height according to your layout */
+    overflow-y: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left; /* Set default alignment to left */
+}
+
+
+
+th:nth-child(2), /* State Name */
+td:nth-child(2), /* State Name */
+th:nth-child(3), /* District Name */
+td:nth-child(3) /* District Name */
+{
+    text-align: left; /* Align to the left */
+}
+
+
+/* Align specific columns to the right */
+td:nth-child(4), /* Total Beneficiaries digitilized on NSAP-PPS */
+td:nth-child(5), /* Total Bank A/C */
+td:nth-child(6), /* Total PO A/C */
+td:nth-child(7), /* Total Thru MO */
+td:nth-child(8), /* Total Thru Cash */
+td:nth-child(9), /* Total Mobile No. */
+td:nth-child(10) /* Total Aadhaar No. */
+{
+    text-align: right; /* Align to the right */
+}
+
+/* Styling for header row */
+th {
+    background-color: #f2f2f2;
+    text-align: right; /* Align header text to the right */
+}
+
+/* Styling for alternating rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+thead, tfoot {
+    position: sticky;
+    top: 0;
+    background-color: #f7f7f7;
+}
+
+tfoot {
+    position: sticky;
+    bottom: 0;
+    background-color: #007bff;
+    color: white;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

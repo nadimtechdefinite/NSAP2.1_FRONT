@@ -1,0 +1,38 @@
+.myText {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.preview-content {
+  margin-top: 20px;
+}
+
+.preview-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+.error .MuiSelect-root {
+  color: red;
+}
+
+.error .MuiInputLabel-root {
+  color: red; 
+}
+
+
+.date-picker-error .MuiOutlinedInput-root {
+  border-color: red !important;
+}
+  

@@ -1,0 +1,7 @@
+.verified-cell {
+    color: green;
+  }
+  
+  .failed-cell {
+    color: red;
+  }

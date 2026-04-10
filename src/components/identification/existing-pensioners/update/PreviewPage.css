@@ -1,0 +1,40 @@
+/* .preview-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  } */
+  
+  .preview-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .preview-section {
+    margin-bottom: 20px;
+  }
+
+  .row {
+    display: flex;
+  }
+  
+  
+  h1 {
+    color: #333;
+  }
+  
+  h2 {
+    color: #555;
+  }
+  
+  p {
+    color: #777;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    
+  }
+  .myText {
+    font-size: 15px;
+  }
+  
+  
+  

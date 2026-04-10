@@ -1,0 +1,12 @@
+/* ContactUs.css */
+
+@media (min-width: 1200px) {
+  .css-1oqqzyl-MuiContainer-root {
+    max-width: inherit;
+  }
+}
+.css-4oqe9z {
+  text-align: center;
+  margin-top: inherit;
+  padding-top: 32px;
+}

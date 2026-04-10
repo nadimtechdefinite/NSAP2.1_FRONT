@@ -1,0 +1,21 @@
+.responsive-kbd {
+    padding: 0.2rem 0.4rem;
+    font-size: 80.5%;
+    color: #fff;
+    background-color: #212529;
+    border-radius: 0.2rem;
+    margin: 0.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-kbd {
+      margin: 0.5rem 5px;
+      font-size: 80%; /* Adjust font size for smaller screens */
+    }
+  }
+  
+
+  .bkColr{
+    background-color: powderblue;
+    color: navy;
+  }

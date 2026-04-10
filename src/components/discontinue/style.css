@@ -1,0 +1,18 @@
+/* styles.css */
+.editable-cell {
+    position: relative;
+  }
+  
+  .edit-icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .error-cell {
+    background-color: #ffcccc; /* Light red background for error cells */
+  }
+  
+  
