@@ -7,33 +7,62 @@ const StateList = ({ onSelectState, defaultSelectedState, isMandatory, showAllIn
   const [selectedState, setSelectedState] = useState('');
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    const fetchStates = async () => {
-      try {
-        const getUrl = '/common/findAllState';
-        const response = await axiosInstance.get(getUrl);
-        setStates(response.data);
+  // useEffect(() => {
+  //   const fetchStates = async () => {
+  //     try {
+  //       const getUrl = '/common/findAllState';
+  //       const response = await axiosInstance.get(getUrl);
+  //       setStates(response.data);
 
-        if (response.data.length === 1) {
-          setSelectedState(response.data[0].stateId);
-          onSelectState(response.data[0].stateId);
-        } else if (defaultSelectedState && selectedState !== defaultSelectedState) {
-          setSelectedState(selectedState);
-          onSelectState(selectedState);
-        }
-      } catch (error) {
-        console.error('Error fetching states:', error);
+  //       if (response.data.length === 1) {
+  //         setSelectedState(response.data[0].stateId);
+  //         onSelectState(response.data[0].stateId);
+  //       } else if (defaultSelectedState && selectedState !== defaultSelectedState) {
+  //         setSelectedState(selectedState);
+  //         onSelectState(selectedState);
+  //       }
+  //     } catch (error) {
+  //       console.error('Error fetching states:', error);
+  //     }
+  //   };
+
+  //   if (states.length === 0 || (defaultSelectedState && selectedState !== defaultSelectedState)) {
+  //     fetchStates();
+  //   }
+  // }, [defaultSelectedState, onSelectState, selectedState, states]);
+
+  useEffect(() => {
+  const fetchStates = async () => {
+    try {
+      const getUrl = '/common/findAllState';
+      const response = await axiosInstance.get(getUrl);
+      setStates(response.data);
+
+      if (response.data.length === 1) {
+        const stateId = response.data[0].stateId;
+        setSelectedState(stateId);
+        onSelectState(stateId);
+      } else if (defaultSelectedState) {
+        setSelectedState(defaultSelectedState);
+        onSelectState(defaultSelectedState);
       }
-    };
-
-    if (states.length === 0 || (defaultSelectedState && selectedState !== defaultSelectedState)) {
-      fetchStates();
+    } catch (error) {
+      console.error('Error fetching states:', error);
     }
-  }, [defaultSelectedState, onSelectState, selectedState, states]);
+  };
 
-  useEffect(() => {
+  fetchStates();
+}, [defaultSelectedState]);
+
+  // useEffect(() => {
+  //   if (defaultSelectedState === '') {
+  //     setSelectedState(defaultSelectedState);
+  //   }
+  // }, [defaultSelectedState]);
+
+    useEffect(() => {
     if (defaultSelectedState === '') {
-      setSelectedState(defaultSelectedState);
+      setSelectedState('');
     }
   }, [defaultSelectedState]);
 
